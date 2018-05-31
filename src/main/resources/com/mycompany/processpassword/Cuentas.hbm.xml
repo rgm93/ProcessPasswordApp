@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 22, 2018 9:55:07 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.mycompany.processpassword.Cuentas" table="CUENTAS" schema="PROCESS">
+        <id name="cuenta" type="string">
+            <column name="CUENTAS" length="50" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="correo" type="string">
+            <column name="CORREO" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" />
+        </property>
+        <property name="usuario" type="string">
+            <column name="USUARIO" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
